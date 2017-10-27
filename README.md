@@ -9,5 +9,5 @@
 
 
 > Links to tools used:
- * Blueimp File Upload Plug-In: (https://github.com/blueimp/jQuery-File-Upload)
- * Wistia Upload API: (http://wistia.com/doc/upload-api)
+ * Blueimp File Upload Plug-In: https://github.com/blueimp/jQuery-File-Upload
+ * Wistia Upload API: http://wistia.com/doc/upload-api
