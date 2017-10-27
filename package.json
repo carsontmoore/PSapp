@@ -1,0 +1,19 @@
+{
+  "name": "processstreet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsontmoore/PSapp.git"
+  },
+  "author": "Carson Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carsontmoore/PSapp/issues"
+  },
+  "homepage": "https://github.com/carsontmoore/PSapp#readme"
+}
