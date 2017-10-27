@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/carsontmoore/PSapp/issues"
   },
-  "homepage": "https://github.com/carsontmoore/PSapp#readme"
+  "homepage": "https://github.com/carsontmoore/PSapp#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
