@@ -12,13 +12,14 @@
 	font-weight: bold;
 	background-color: dodgerblue;
 	color: white ;
+	margin-top: 0px;
 }
 
 .bar {
 	height: 8px;
 	background: dodgerblue;
 	color: white;
-	padding: 5px;
+	margin-top: 5px;
 }
 
 #fileupload {
@@ -35,3 +36,4 @@
 	background-color: lightgrey;
 	margin: auto;
 }
+
