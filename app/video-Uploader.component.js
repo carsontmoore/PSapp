@@ -14,25 +14,30 @@ angular.
 		      dataType: 'json',
 		      formData: {
 		      	api_password: '29b0b64ab2e6d803b45d132c933468ac49eb9b14f1e8b43ef8a46028ac2c1cf9',
-		      	method: 'POST'
 		      },
 		      add: function (e, data) {
-		      	console.log('Log before submit')
+		      	data.context = $('<p/>').text('Uploading...').appendTo(document.body);
 		      	data.submit();
-		      	console.log('AFTER SUBMIT')
 		      },
 		      done: function (e, data) {
-		      	data.context.text('Upload complete.');
-		      	console.log('UPLOAD IS COMPLETE')
+		      	$('#progressBar .bar').css('width', "0px");
+		      	$('#percent').text('0%');
+		      	console.log("this is data argument: ", data);
+		      	if(data.result.status === 'ready') {
+		      		$('#videoEmbed').append('<div id="videoEmbed" class="wistia_embed wistia_async_"+data.result.hashed_id style="width:640px;height:360px;">&nbsp;</div>');
+		      		data.context.text(data.result.name + 'has been successfully uploaded!');
+		      	} else {
+		      		data.context.text(data.result.name + ' uploaded successfully and is queued for Wistia encoding! Playback will occur when the video is ready.')
+		      	}
 		      },
 		      progressall: function (e, data) {
 		        var progress = parseInt(data.loaded / data.total * 100, 10);
-		        $('#progress .bar').css(
+		        $('#progressBar .bar').css(
 		        	'width',
 		        	progress + '%'
 		        );
 		        $('#percent').text(progress + '%');
-			    }
+			    },
 		  });
-	  }
-  })
+		}
+});
